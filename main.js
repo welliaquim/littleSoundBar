@@ -4,13 +4,23 @@ function audioElement(idAudio) {
 
 const arrTeclas = document.querySelectorAll('.tecla');
 
-let contagemArrTeclas = 0;
+// Realizei o laço for para iterar sobre todos os elementos que o arrTeclas tem
 
-while (contagemArrTeclas < arrTeclas.length) {
-  const tecla = arrTeclas[contagemArrTeclas];
+for (let i = 0; i < arrTeclas.length; i++) {
+  const tecla = arrTeclas[i];
   const instrumentoSom = tecla.classList[1];
   const idInstrumentoSom = `#som_${instrumentoSom}`;
 
   tecla.onclick = () => audioElement(idInstrumentoSom);
-  contagemArrTeclas++;
 }
+
+// let contagemArrTeclas = 0;
+
+// while (contagemArrTeclas < arrTeclas.length) {
+//   const tecla = arrTeclas[contagemArrTeclas];
+//   const instrumentoSom = tecla.classList[1];
+//   const idInstrumentoSom = `#som_${instrumentoSom}`;
+
+//   tecla.onclick = () => audioElement(idInstrumentoSom);
+//   contagemArrTeclas++;
+// }
